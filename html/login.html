@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bolão de Palpites de Futebol">
+    <meta name="author" content="Francisco Flávio | GitHub: https://github.com/fflaviotito">
+    <!-- icons do Font Awesome-->
+    <script src="https://kit.fontawesome.com/6ecc7a6b2a.js" defer></script>
+    <title>Bolão de Palpites | Entrar ou Cadastrar</title>
+</head>
+<body>
+    <main>
+        <section> <!--Seção do formulários de cadastro-->
+            <h2>Cadastre-se</h2> <!--Título da section-->
+
+            <div> <!--Início do Cadastro Social-->
+                <button type="button"> <!--Cadastro com o Google-->
+                    <span class="fa-brands fa-google" aria-label="Cadastrar com Google"></span>
+                    <span>Cadastrar com o Google</span>
+                </button>
+
+                <button type="button"> <!--Cadastro com o Facebook-->
+                    <span class="fa-brands fa-facebook" aria-label="Cadastrar com Facebook"></span>
+                    <span>Cadastrar com o Facebook</span>
+                </button>
+            </div> <!--Fim do Cadastro Social-->
+
+            <p>Registre-se para continuar.</p>
+
+            <form action="#" method="post" autocomplete="on"> <!--Início do formulário de cadastro-->
+                <label for="register-name">
+                    <span class="fa-solid fa-user"></span>
+                </label>
+                <input type="text" name="register-name" id="register-name" placeholder="Nome Completo" required>
+
+                <label for="register-date">
+                    <span class="fa-solid fa-calendar"></span>
+                </label>
+                <input type="date" name="register-date" id="register-date" placeholder="dd/mm/aaaa" required>
+
+                <label for="register-email">
+                    <span class="fa-solid fa-envelope"></span>
+                </label>
+                <input type="email" name="register-email" id="register-email" placeholder="E-mail" required>
+
+                <label for="register-password">
+                    <span class="fa-solid fa-lock"></span>
+                </label>
+                <input type="password" name="register-password" id="register-password" placeholder="Senha" required>
+
+                <label for="register-confirm-password">
+                    <span class="fa-solid fa-lock"></span>
+                </label>
+                <input type="password" name="register-confirm-password" id="register-confirm-password" placeholder="Confirmar Senha" required>
+
+                <button type="submit">Registrar</button>
+                <button type="reset">Limpar</button>
+            </form> <!--Fim do formulário de cadastro-->
+
+            <button type="button">Já possui cadastro?</button> <!--Botão para levar ao formulário de login-->
+        </section> <!--Fim da seção de formulário de Cadastro-->
+
+        <section> <!--Seção do formulário de login-->
+            <h2>Login</h2> <!--Título da section-->
+
+            <div> <!--Início do Login Social-->
+                <button type="button"> <!--Entrar com o Google-->
+                    <span class="fa-brands fa-google" aria-label="Entrar com Google"></span>
+                    <span>Entrar com o Google</span>
+                </button>
+
+                <button type="button"> <!--Entrar com o Facebook-->
+                    <span class="fa-brands fa-facebook" aria-label="Entrar com Facebook"></span>
+                    <span>Entrar com o Facebook</span>
+                </button>
+            </div> <!--Fim do Login Social-->            
+
+            <p>Conecte-se para continuar.</p>
+
+            <form action="#" method="post" autocomplete="on"> <!--Início do formulário de login-->
+                <label for="login-email">
+                    <span class="fa-solid fa-envelope"></span>
+                </label>
+                <input type="email" name="login-email" id="login-email" placeholder="E-mail" required>
+
+                <label for="login-password">
+                    <span class="fa-solid fa-lock"></span>
+                </label>
+                <input type="password" name="login-password" id="login-password" placeholder="Senha" required>    
+                
+                <button type="submit">Entrar</button>
+                <button type="reset">Limpar</button>
+            </form> <!--Fim do formulário de login-->
+
+            <a href="#">Esqueceu sua senha?</a> <!--Botão para levar a página de recuperação de senha-->
+        </section> <!--Fim da seção de formulário de cadastro-->
+    </main>
+</body>
+</html>
