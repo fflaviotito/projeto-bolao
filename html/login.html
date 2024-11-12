@@ -29,32 +29,32 @@
             <p>Registre-se para continuar.</p>
 
             <form action="#" method="post" autocomplete="on"> <!--Início do formulário de cadastro-->
-                <label for="register-name">
+                <label for="singup-name" aria-label="Nome completo para cadastro">
                     <span class="fa-solid fa-user"></span>
                 </label>
-                <input type="text" name="register-name" id="register-name" placeholder="Nome Completo" required>
+                <input type="text" name="singup-name" id="singup-name" placeholder="Nome Completo" required>
 
-                <label for="register-date">
+                <label for="singup-date" aria-label="Data de nascimento para cadastro">
                     <span class="fa-solid fa-calendar"></span>
                 </label>
-                <input type="date" name="register-date" id="register-date" placeholder="dd/mm/aaaa" required>
+                <input type="date" name="singup-date" id="singup-date" placeholder="dd/mm/aaaa" required>
 
-                <label for="register-email">
+                <label for="singup-email" aria-label="Endereço de e-mail para cadastro">
                     <span class="fa-solid fa-envelope"></span>
                 </label>
-                <input type="email" name="register-email" id="register-email" placeholder="E-mail" required>
+                <input type="email" name="singup-email" id="singup-email" placeholder="E-mail" required>
 
-                <label for="register-password">
+                <label for="singup-password" aria-label="Senha para cadastro">
                     <span class="fa-solid fa-lock"></span>
                 </label>
-                <input type="password" name="register-password" id="register-password" placeholder="Senha" required>
+                <input type="password" name="singup-password" id="singup-password" placeholder="Senha" required>
 
-                <label for="register-confirm-password">
+                <label for="singup-confirm-password" aria-label="Confirmar senha para cadastro">
                     <span class="fa-solid fa-lock"></span>
                 </label>
-                <input type="password" name="register-confirm-password" id="register-confirm-password" placeholder="Confirmar Senha" required>
+                <input type="password" name="singup-confirm-password" id="singup-confirm-password" placeholder="Confirmar Senha" required>
 
-                <button type="submit">Registrar</button>
+                <button type="submit">Registrar-se</button>
                 <button type="reset">Limpar</button>
             </form> <!--Fim do formulário de cadastro-->
 
@@ -79,21 +79,23 @@
             <p>Conecte-se para continuar.</p>
 
             <form action="#" method="post" autocomplete="on"> <!--Início do formulário de login-->
-                <label for="login-email">
+                <label for="login-email" aria-label="Endereço de e-mail para entrar">
                     <span class="fa-solid fa-envelope"></span>
                 </label>
                 <input type="email" name="login-email" id="login-email" placeholder="E-mail" required>
 
-                <label for="login-password">
+                <label for="login-password" aria-label="Senha para entrar">
                     <span class="fa-solid fa-lock"></span>
                 </label>
                 <input type="password" name="login-password" id="login-password" placeholder="Senha" required>    
                 
-                <button type="submit">Entrar</button>
+                <button type="submit">Conectar-se</button>
                 <button type="reset">Limpar</button>
             </form> <!--Fim do formulário de login-->
 
             <a href="#">Esqueceu sua senha?</a> <!--Botão para levar a página de recuperação de senha-->
+
+            <button type="button">Ainda não possui cadastro?</button> <!--Botão para levar ao formulário de cadastro-->
         </section> <!--Fim da seção de formulário de cadastro-->
     </main>
 </body>
