@@ -5,98 +5,117 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Bolão de Palpites de Futebol">
     <meta name="author" content="Francisco Flávio | GitHub: https://github.com/fflaviotito">
+    <!--Bootstrap CSS
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    -->
+    <link rel="stylesheet" href="../estilos/login.css">
     <!-- icons do Font Awesome-->
     <script src="https://kit.fontawesome.com/6ecc7a6b2a.js" defer></script>
     <title>Bolão de Palpites | Entrar ou Cadastrar</title>
 </head>
 <body>
-    <main>
-        <section> <!--Seção do formulários de cadastro-->
-            <h2>Cadastre-se</h2> <!--Título da section-->
+    <main class="container">
+        <section class="container-form off"> <!--Seção do formulários de cadastro-->
+            <h2 class="title">Cadastre-se</h2> <!--Título da section-->
 
             <div> <!--Início do Cadastro Social-->
-                <button type="button"> <!--Cadastro com o Google-->
-                    <span class="fa-brands fa-google" aria-label="Cadastrar com Google"></span>
-                    <span>Cadastrar com o Google</span>
+                <button type="button" class="social-button"> <!--Cadastro com o Google-->
+                    <span class="fa-brands fa-google social-button-icon" aria-label="Cadastrar com Google"></span>
+                    <span class="social-button-text">Cadastrar com o Google</span>
                 </button>
 
-                <button type="button"> <!--Cadastro com o Facebook-->
-                    <span class="fa-brands fa-facebook" aria-label="Cadastrar com Facebook"></span>
-                    <span>Cadastrar com o Facebook</span>
+                <button type="button" class="social-button"> <!--Cadastro com o Facebook-->
+                    <span class="fa-brands fa-facebook social-button-icon" aria-label="Cadastrar com Facebook"></span>
+                    <span class="social-button-text">Cadastrar com o Facebook</span>
                 </button>
             </div> <!--Fim do Cadastro Social-->
 
-            <p>Registre-se para continuar.</p>
+            <p class="sub-title">Registre-se para continuar.</p>
 
             <form action="#" method="post" autocomplete="on"> <!--Início do formulário de cadastro-->
-                <label for="singup-name" aria-label="Nome completo para cadastro">
-                    <span class="fa-solid fa-user"></span>
-                </label>
-                <input type="text" name="singup-name" id="singup-name" placeholder="Nome Completo" required>
+                <div class="form-item">
+                    <label for="singup-name" aria-label="Nome completo para cadastro">
+                        <span class="fa-solid fa-user"></span>
+                    </label>
+                    <input type="text" name="singup-name" id="singup-name" placeholder="Nome Completo" required>
+                </div>
 
-                <label for="singup-date" aria-label="Data de nascimento para cadastro">
-                    <span class="fa-solid fa-calendar"></span>
-                </label>
-                <input type="date" name="singup-date" id="singup-date" placeholder="dd/mm/aaaa" required>
+                <div class="form-item">
+                    <label for="singup-date" aria-label="Data de nascimento para cadastro">
+                        <span class="fa-solid fa-calendar"></span>
+                    </label>
+                    <input type="text" name="singup-date" id="singup-date" placeholder="dd/mm/aaaa" required>
+                </div>
 
-                <label for="singup-email" aria-label="Endereço de e-mail para cadastro">
-                    <span class="fa-solid fa-envelope"></span>
-                </label>
-                <input type="email" name="singup-email" id="singup-email" placeholder="E-mail" required>
+                <div class="form-item">
+                    <label for="singup-email" aria-label="Endereço de e-mail para cadastro">
+                        <span class="fa-solid fa-envelope"></span>
+                    </label>
+                    <input type="email" name="singup-email" id="singup-email" placeholder="E-mail" required>
+                </div>
 
-                <label for="singup-password" aria-label="Senha para cadastro">
-                    <span class="fa-solid fa-lock"></span>
-                </label>
-                <input type="password" name="singup-password" id="singup-password" placeholder="Senha" required>
+                <div class="form-item">
+                    <label for="singup-password" aria-label="Senha para cadastro">
+                        <span class="fa-solid fa-lock"></span>
+                    </label>
+                    <input type="password" name="singup-password" id="singup-password" placeholder="Senha" required>
+                </div>
 
-                <label for="singup-confirm-password" aria-label="Confirmar senha para cadastro">
-                    <span class="fa-solid fa-lock"></span>
-                </label>
-                <input type="password" name="singup-confirm-password" id="singup-confirm-password" placeholder="Confirmar Senha" required>
+                <div class="form-item">
+                    <label for="singup-confirm-password" aria-label="Confirmar senha para cadastro">
+                        <span class="fa-solid fa-lock"></span>
+                    </label>
+                    <input type="password" name="singup-confirm-password" id="singup-confirm-password" placeholder="Confirmar Senha" required>
+                </div>
 
-                <button type="submit">Registrar-se</button>
-                <button type="reset">Limpar</button>
+                <button type="submit" class="form-button">Registrar-se</button>
             </form> <!--Fim do formulário de cadastro-->
 
-            <button type="button">Já possui cadastro?</button> <!--Botão para levar ao formulário de login-->
+            <button type="button" class="change-form">Já possui cadastro?</button> <!--Botão para levar ao formulário de login-->
         </section> <!--Fim da seção de formulário de Cadastro-->
 
-        <section> <!--Seção do formulário de login-->
-            <h2>Login</h2> <!--Título da section-->
+        <section class="container-form"> <!--Seção do formulário de login-->
+            <h2 class="title">Login</h2> <!--Título da section-->
 
             <div> <!--Início do Login Social-->
-                <button type="button"> <!--Entrar com o Google-->
-                    <span class="fa-brands fa-google" aria-label="Entrar com Google"></span>
-                    <span>Entrar com o Google</span>
+                <button type="button" class="social-button"> <!--Entrar com o Google-->
+                    <span class="fa-brands fa-google social-button-icon" aria-label="Entrar com Google"></span>
+                    <span class="social-button-text">Entrar com o Google</span>
                 </button>
 
-                <button type="button"> <!--Entrar com o Facebook-->
-                    <span class="fa-brands fa-facebook" aria-label="Entrar com Facebook"></span>
-                    <span>Entrar com o Facebook</span>
+                <button type="button" class="social-button"> <!--Entrar com o Facebook-->
+                    <span class="fa-brands fa-facebook social-button-icon" aria-label="Entrar com Facebook"></span>
+                    <span class="social-button-text">Entrar com o Facebook</span>
                 </button>
             </div> <!--Fim do Login Social-->            
 
-            <p>Conecte-se para continuar.</p>
+            <p class="sub-title">Conecte-se para continuar.</p>
 
             <form action="#" method="post" autocomplete="on"> <!--Início do formulário de login-->
-                <label for="login-email" aria-label="Endereço de e-mail para entrar">
-                    <span class="fa-solid fa-envelope"></span>
-                </label>
-                <input type="email" name="login-email" id="login-email" placeholder="E-mail" required>
+                <div class="form-item">
+                    <label for="login-email" aria-label="Endereço de e-mail para entrar">
+                        <span class="fa-solid fa-envelope"></span>
+                    </label>
+                    <input type="email" name="login-email" id="login-email" placeholder="E-mail" required>
+                </div>
 
-                <label for="login-password" aria-label="Senha para entrar">
-                    <span class="fa-solid fa-lock"></span>
-                </label>
-                <input type="password" name="login-password" id="login-password" placeholder="Senha" required>    
+                <div class="form-item">
+                    <label for="login-password" aria-label="Senha para entrar">
+                        <span class="fa-solid fa-lock"></span>
+                    </label>
+                    <input type="password" name="login-password" id="login-password" placeholder="Senha" required>
+                </div>    
                 
-                <button type="submit">Conectar-se</button>
-                <button type="reset">Limpar</button>
+                <button type="submit" class="form-button">Conectar-se</button>
             </form> <!--Fim do formulário de login-->
 
-            <a href="#">Esqueceu sua senha?</a> <!--Botão para levar a página de recuperação de senha-->
+            <a href="#" class="remember-password">Esqueceu sua senha?</a> <!--Botão para levar a página de recuperação de senha-->
 
-            <button type="button">Ainda não possui cadastro?</button> <!--Botão para levar ao formulário de cadastro-->
+            <button type="button" class="change-form">Ainda não possui cadastro?</button> <!--Botão para levar ao formulário de cadastro-->
         </section> <!--Fim da seção de formulário de cadastro-->
     </main>
+    <!--Bootstrap JS
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    -->
 </body>
 </html>
