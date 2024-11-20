@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="../estilos/login.css">
     <!--Icons do Font Awesome-->
     <script src="https://kit.fontawesome.com/6ecc7a6b2a.js" defer></script>
+    <!--JS da página-->
+    <script src="../script/login.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs"></script> <!--CDN Day.js-->
     <title>Bolão de Palpites | Entrar ou Cadastrar</title>
 </head>
 <body>
@@ -30,7 +33,7 @@
 
             <p class="sub-title">Registre-se para continuar.</p>
 
-            <form action="#" method="post" autocomplete="on"> <!--Início do formulário de cadastro-->
+            <form action="#" method="post" autocomplete="on" id="form-singup"> <!--Início do formulário de cadastro-->
                 <div class="form-item">
                     <label for="singup-name" aria-label="Nome completo para cadastro">
                         <span class="fa-solid fa-user"></span>
@@ -56,14 +59,14 @@
                     <label for="singup-password" aria-label="Senha para cadastro">
                         <span class="fa-solid fa-lock"></span>
                     </label>
-                    <input type="password" name="singup-password" id="singup-password" placeholder="Senha" required>
+                    <input type="password" name="singup-password" id="singup-password" placeholder="Senha" class="password" required>
                 </div>
 
                 <div class="form-item">
                     <label for="singup-confirm-password" aria-label="Confirmar senha para cadastro">
                         <span class="fa-solid fa-lock"></span>
                     </label>
-                    <input type="password" name="singup-confirm-password" id="singup-confirm-password" placeholder="Confirmar Senha" required>
+                    <input type="password" name="singup-confirm-password" id="singup-confirm-password" placeholder="Confirmar Senha" class="password" required>
                 </div>
 
                 <button type="submit" class="form-button">Registrar-se</button>
@@ -89,7 +92,7 @@
 
             <p class="sub-title">Conecte-se para continuar.</p>
 
-            <form action="#" method="post" autocomplete="on"> <!--Início do formulário de login-->
+            <form action="#" method="post" autocomplete="on" id="form-login"> <!--Início do formulário de login-->
                 <div class="form-item">
                     <label for="login-email" aria-label="Endereço de e-mail para entrar">
                         <span class="fa-solid fa-envelope"></span>
@@ -101,7 +104,7 @@
                     <label for="login-password" aria-label="Senha para entrar">
                         <span class="fa-solid fa-lock"></span>
                     </label>
-                    <input type="password" name="login-password" id="login-password" placeholder="Senha" required>
+                    <input type="password" name="login-password" id="login-password" placeholder="Senha" class="password" required>
                 </div>    
                 
                 <button type="submit" class="form-button">Conectar-se</button>
