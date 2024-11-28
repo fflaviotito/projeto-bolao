@@ -11,7 +11,6 @@
     <script src="https://kit.fontawesome.com/6ecc7a6b2a.js" defer></script>
     <!--JS da página-->
     <script src="../script/login.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/dayjs"></script> <!--CDN Day.js-->
     <title>Bolão de Palpites | Entrar ou Cadastrar</title>
 </head>
 <body>
@@ -33,40 +32,40 @@
 
             <p class="sub-title">Registre-se para continuar.</p>
 
-            <form action="#" method="post" autocomplete="on" id="form-singup"> <!--Início do formulário de cadastro-->
+            <form action="/register" method="post" autocomplete="on" id="form-signup"> <!--Início do formulário de cadastro-->
                 <div class="form-item">
-                    <label for="singup-name" aria-label="Nome completo para cadastro">
+                    <label for="signup-name" aria-label="Nome completo para cadastro">
                         <span class="fa-solid fa-user"></span>
                     </label>
-                    <input type="text" name="singup-name" id="singup-name" placeholder="Nome Completo" required>
+                    <input type="text" name="signup-name" id="signup-name" placeholder="Nome Completo" required>
                 </div>
 
                 <div class="form-item">
-                    <label for="singup-date" aria-label="Data de nascimento para cadastro">
+                    <label for="signup-date" aria-label="Data de nascimento para cadastro">
                         <span class="fa-solid fa-calendar"></span>
                     </label>
-                    <input type="text" name="singup-date" id="singup-date" placeholder="dd/mm/aaaa" required>
+                    <input type="text" name="signup-date" id="signup-date" placeholder="dd/mm/aaaa" required>
                 </div>
 
                 <div class="form-item">
-                    <label for="singup-email" aria-label="Endereço de e-mail para cadastro">
+                    <label for="signup-email" aria-label="Endereço de e-mail para cadastro">
                         <span class="fa-solid fa-envelope"></span>
                     </label>
-                    <input type="email" name="singup-email" id="singup-email" placeholder="E-mail" required>
+                    <input type="email" name="signup-email" id="signup-email" placeholder="E-mail" required>
                 </div>
 
                 <div class="form-item">
-                    <label for="singup-password" aria-label="Senha para cadastro">
+                    <label for="signup-password" aria-label="Senha para cadastro">
                         <span class="fa-solid fa-lock"></span>
                     </label>
-                    <input type="password" name="singup-password" id="singup-password" placeholder="Senha" class="password" required>
+                    <input type="password" name="signup-password" id="signup-password" placeholder="Senha" class="password" required>
                 </div>
 
                 <div class="form-item">
-                    <label for="singup-confirm-password" aria-label="Confirmar senha para cadastro">
+                    <label for="signup-confirm-password" aria-label="Confirmar senha para cadastro">
                         <span class="fa-solid fa-lock"></span>
                     </label>
-                    <input type="password" name="singup-confirm-password" id="singup-confirm-password" placeholder="Confirmar Senha" class="password" required>
+                    <input type="password" name="signup-confirm-password" id="signup-confirm-password" placeholder="Confirmar Senha" class="password" required>
                 </div>
 
                 <button type="submit" class="form-button">Registrar-se</button>
