@@ -1,3 +1,4 @@
+const bcrypt = require('bcrypt'); // Importa o bcrypt para hashing de senhas
 const connection = require('../database'); // Importa a conexão com o banco de dados
 
 const registerUser = async (req, res) => {
@@ -10,9 +11,12 @@ const registerUser = async (req, res) => {
     }
 
     try {
+        // Hash da senha
+        const hashedPassword = await bcrypt.hash(password, 10);
+
         // Insere o novo usuário no banco de dados
         const query = 'INSERT INTO users (name, birth_date, email, password) VALUES (?, ?, ?, ?)';
-        await connection.execute(query, [name, formattedDate, email, password]);
+        await connection.execute(query, [name, formattedDate, email, hashedPassword]);
 
         // Retorna sucesso
         return res.status(201).json({ message: "Usuário cadastrado com sucesso!" });

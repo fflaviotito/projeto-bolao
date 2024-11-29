@@ -182,10 +182,12 @@ signupPassword.addEventListener('blur', function () {
 
     //Formatando o campo de confirmação de senha
     if (signupConfirmPassword.value != signupPassword.value) {
+        signupConfirmPassword.classList.remove('correct-input');
         signupConfirmPassword.classList.add('incorrect-input');
         return;
     } else {
         signupConfirmPassword.classList.remove('incorrect-input');
+        signupConfirmPassword.classList.add('correct-input');
     };
 });
 
