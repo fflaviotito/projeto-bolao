@@ -18,6 +18,7 @@ const registerUser = async (req, res) => {
 
         const [results] = await connection.promise().query(checkEmailQuery, [email]);
         const count = results[0].count;
+        
         if (count > 0) {
             return res.status(400).json({ message: 'E-mail já cadastrado.' });
         }
