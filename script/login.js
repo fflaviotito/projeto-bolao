@@ -182,10 +182,12 @@ signupPassword.addEventListener('blur', function () {
 
     //Formatando o campo de confirmação de senha
     if (signupConfirmPassword.value != signupPassword.value) {
+        signupConfirmPassword.classList.remove('correct-input');
         signupConfirmPassword.classList.add('incorrect-input');
         return;
     } else {
         signupConfirmPassword.classList.remove('incorrect-input');
+        signupConfirmPassword.classList.add('correct-input');
     };
 });
 
@@ -286,7 +288,9 @@ loginPassword.addEventListener("input", () => {
 });
 
 //Impede o envio do formulário de login, caso exista algum campo sem validação
-loginForm.addEventListener('submit', function(event) {
+loginForm.addEventListener("submit", async function (event) {
+    event.preventDefault();  // Evita o comportamento padrão do formulário (recarregar a página)
+    
     const emailValue = loginEmail.value;
     const passwordValue = loginPassword.value;
     let hasError = false;
@@ -303,9 +307,46 @@ loginForm.addEventListener('submit', function(event) {
 
     //Impede o envio do formulário se houver erro
     if(hasError) {
-        event.preventDefault();
+        alert("Preencha todos os campos com informações válidas!");
         loginEmail.value = "";
         loginPassword.value = "";
-        alert("Preencha todos os campos com informações válidas!");
+        return;
     };
+
+    //========== Capturando dados do formulário ==========
+    const email = loginEmail.value.trim();
+    const password = loginPassword.value.trim();
+
+    const formData = {
+        email,
+        password
+    };
+
+
+    //========== Tratamento de erros ==========
+    try {
+        //========== Envio dos dados para o backend via POST ==========
+        const response = await fetch('http://127.0.0.1:3000/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json', //Definindo o tipo de conteúdo
+            },
+            body: JSON.stringify(formData), //Envia os dados no formato JSON
+        });
+
+
+        //========== Verifica se a resposta foi bem-sucedida ==========
+        if (!response.ok) {
+            const errorData = await response.json();
+            alert('Erro: ' + errorData.message);
+        } else {
+            const data = await response.json();
+            alert(data.message);  // Exibe a mensagem de sucesso do backend
+            window.location.reload();
+        }
+
+    } catch (error) {
+        console.error('Erro ao enviar os dados:', error);
+        alert('Erro ao enviar os dados. Tente novamente mais tarde.');
+    }
 });
