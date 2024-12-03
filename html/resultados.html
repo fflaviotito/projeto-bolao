@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bolão de Palpites de Futebol">
+    <meta name="author" content="Francisco Flávio | GitHub: https://github.com/fflaviotito">
+    <!--CSS da página-->
+
+    <!--Icons do Font Awesome-->
+    <script src="https://kit.fontawesome.com/6ecc7a6b2a.js" defer></script>
+    <!--JS da página-->
+
+    <title>Bolão de Palpites | Tabela e Jogos</title>
+</head>
+<body>
+    <!--Cabeçalho padrão-->
+    <header>
+        <button aria-label="Abrir menu de navegação">
+            <span class="fa-solid fa-bars"></span>
+        </button>
+        <h1>Bolão de Palpites</h1>
+    </header>
+
+
+    <!--Menu de navegação lateral padrão-->
+    <nav aria-hidden="true">
+        <div>
+            <button aria-label="Fechar menu de navegação">
+                <span class="fa-solid fa-xmark"></span>
+            </button>
+            
+            <h2>Menu</h2>
+
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="fa-solid fa-house"></span>
+                        <span>Home</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="fa-solid fa-trophy"></span>
+                        <span>Tabela e Jogos</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="fa-solid fa-futbol"></span>
+                        <span>Palpites da Rodada</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="fa-solid fa-ranking-star"></span>
+                        <span>Palpites da Tabela</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="fa-solid fa-gear"></span>
+                        <span>Configurações</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="fa-solid fa-right-from-bracket"></span>
+                        <span>Sair</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!--Conteúdo principal-->
+    <main>
+        <!--Seção: Tabela de Classificação-->
+        <section>
+            <h2>Tabela de Classificação</h2>
+
+            <table>
+                <thead> <!--Cabeçalho da tabela de classificação-->
+                    <tr>
+                        <th colspan="3">Classificação</th>
+                        <th>P</th>
+                        <th>J</th>
+                        <th>V</th>
+                        <th>E</th>
+                        <th>D</th>
+                        <th>GP</th>
+                        <th>GC</th>
+                        <th>SG</th>
+                    </tr>
+                </thead>
+
+                <tbody> <!--Corpo da tabela de classificação-->
+                    <!--Primeira linha-->
+                    <tr>
+                        <td>1</td>
+                        <td>Time 1</td>
+                        <td>icone</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+
+                    <!--Segunda linha-->
+                    <tr>
+                        <td>2</td>
+                        <td>Time 2</td>
+                        <td>icone</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+
+                    <!--Terceira linha-->
+                    <tr>
+                        <td>3</td>
+                        <td>Time 3</td>
+                        <td>icone</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+
+                    <!--Quarta linha-->
+                    <tr>
+                        <td>4</td>
+                        <td>Time 4</td>
+                        <td>icone</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+
+                    <!--Quinta linha-->
+                    <tr>
+                        <td>5</td>
+                        <td>Time 5</td>
+                        <td>icone</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+
+                    <!--Sexta linha-->
+                    <tr>
+                        <td>6</td>
+                        <td>Time 6</td>
+                        <td>icone</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+
+                    <!--Sétima linha-->
+                    <tr>
+                        <td>7</td>
+                        <td>Time 7</td>
+                        <td>icone</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+
+                    <!--Oitava linha-->
+                    <tr>
+                        <td>8</td>
+                        <td>Time 8</td>
+                        <td>icone</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+
+                    <!--Nona linha-->
+                    <tr>
+                        <td>9</td>
+                        <td>Time 9</td>
+                        <td>icone</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+
+                    <!--Décima linha-->
+                    <tr>
+                        <td>10</td>
+                        <td>Time 10</td>
+                        <td>icone</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+
+                    <!--Décima primeira linha-->
+                    <tr>
+                        <td>11</td>
+                        <td>Time 11</td>
+                        <td>icone</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+
+                    <!--Décima segunda linha-->
+                    <tr>
+                        <td>12</td>
+                        <td>Time 12</td>
+                        <td>icone</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+
+                    <!--Décima terceira linha-->
+                    <tr>
+                        <td>13</td>
+                        <td>Time 13</td>
+                        <td>icone</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+
+                    <!--Décima quarta linha-->
+                    <tr>
+                        <td>14</td>
+                        <td>Time 14</td>
+                        <td>icone</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+
+                    <!--Décima quinta linha-->
+                    <tr>
+                        <td>15</td>
+                        <td>Time 15</td>
+                        <td>icone</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+
+                    <!--Décima sexta linha-->
+                    <tr>
+                        <td>16</td>
+                        <td>Time 16</td>
+                        <td>icone</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+
+                    <!--Décima sétima linha-->
+                    <tr>
+                        <td>17</td>
+                        <td>Time 17</td>
+                        <td>icone</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+
+                    <!--Décima oitava linha-->
+                    <tr>
+                        <td>18</td>
+                        <td>Time 18</td>
+                        <td>icone</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+
+                    <!--Décima nona linha-->
+                    <tr>
+                        <td>19</td>
+                        <td>Time 19</td>
+                        <td>icone</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+
+                    <!--Vigésima linha-->
+                    <tr>
+                        <td>20</td>
+                        <td>Time 20</td>
+                        <td>icone</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+
+        <!--Seção: Confrontos por rodada-->
+        <section>
+            <h2>Confrontos por rodada</h2>
+
+            <article>
+                <h3>Rodada 1</h3>
+
+                <ul>
+                    <!--Primeiro Jogo-->
+                    <li>
+                        <div>
+                            <span>Nome do Estádio</span>
+                            <span>Data do Jogo</span>
+                            <span>Horário do Jogo</span>
+                        </div>
+
+                        <div>
+                            <span>Time Mandante</span>
+                            <span>Escudo Mandante</span>
+                            <span>Placar Mandante</span>
+                            <span>X</span>
+                            <span>Placar Visitante</span>
+                            <span>Escudo Visitante</span>
+                            <span>Time Visitante</span>
+                        </div>
+
+                        <span>Status do Jogo</span>
+                    </li>
+
+                    <!--Segundo Jogo-->
+                    <li>
+                        <div>
+                            <span>Nome do Estádio</span>
+                            <span>Data do Jogo</span>
+                            <span>Horário do Jogo</span>
+                        </div>
+
+                        <div>
+                            <span>Time Mandante</span>
+                            <span>Escudo Mandante</span>
+                            <span>Placar Mandante</span>
+                            <span>X</span>
+                            <span>Placar Visitante</span>
+                            <span>Escudo Visitante</span>
+                            <span>Time Visitante</span>
+                        </div>
+
+                        <span>Status do Jogo</span>
+                    </li>
+
+                    <!--Terceiro Jogo-->
+                    <li>
+                        <div>
+                            <span>Nome do Estádio</span>
+                            <span>Data do Jogo</span>
+                            <span>Horário do Jogo</span>
+                        </div>
+
+                        <div>
+                            <span>Time Mandante</span>
+                            <span>Escudo Mandante</span>
+                            <span>Placar Mandante</span>
+                            <span>X</span>
+                            <span>Placar Visitante</span>
+                            <span>Escudo Visitante</span>
+                            <span>Time Visitante</span>
+                        </div>
+
+                        <span>Status do Jogo</span>
+                    </li>
+
+                    <!--Quarto Jogo-->
+                    <li>
+                        <div>
+                            <span>Nome do Estádio</span>
+                            <span>Data do Jogo</span>
+                            <span>Horário do Jogo</span>
+                        </div>
+
+                        <div>
+                            <span>Time Mandante</span>
+                            <span>Escudo Mandante</span>
+                            <span>Placar Mandante</span>
+                            <span>X</span>
+                            <span>Placar Visitante</span>
+                            <span>Escudo Visitante</span>
+                            <span>Time Visitante</span>
+                        </div>
+
+                        <span>Status do Jogo</span>
+                    </li>
+
+                    <!--Quinto Jogo-->
+                    <li>
+                        <div>
+                            <span>Nome do Estádio</span>
+                            <span>Data do Jogo</span>
+                            <span>Horário do Jogo</span>
+                        </div>
+
+                        <div>
+                            <span>Time Mandante</span>
+                            <span>Escudo Mandante</span>
+                            <span>Placar Mandante</span>
+                            <span>X</span>
+                            <span>Placar Visitante</span>
+                            <span>Escudo Visitante</span>
+                            <span>Time Visitante</span>
+                        </div>
+
+                        <span>Status do Jogo</span>
+                    </li>
+
+                    <!--Sexto Jogo-->
+                    <li>
+                        <div>
+                            <span>Nome do Estádio</span>
+                            <span>Data do Jogo</span>
+                            <span>Horário do Jogo</span>
+                        </div>
+
+                        <div>
+                            <span>Time Mandante</span>
+                            <span>Escudo Mandante</span>
+                            <span>Placar Mandante</span>
+                            <span>X</span>
+                            <span>Placar Visitante</span>
+                            <span>Escudo Visitante</span>
+                            <span>Time Visitante</span>
+                        </div>
+
+                        <span>Status do Jogo</span>
+                    </li>
+
+                    <!--Sétimo Jogo-->
+                    <li>
+                        <div>
+                            <span>Nome do Estádio</span>
+                            <span>Data do Jogo</span>
+                            <span>Horário do Jogo</span>
+                        </div>
+
+                        <div>
+                            <span>Time Mandante</span>
+                            <span>Escudo Mandante</span>
+                            <span>Placar Mandante</span>
+                            <span>X</span>
+                            <span>Placar Visitante</span>
+                            <span>Escudo Visitante</span>
+                            <span>Time Visitante</span>
+                        </div>
+
+                        <span>Status do Jogo</span>
+                    </li>
+
+                    <!--Oitavo Jogo-->
+                    <li>
+                        <div>
+                            <span>Nome do Estádio</span>
+                            <span>Data do Jogo</span>
+                            <span>Horário do Jogo</span>
+                        </div>
+
+                        <div>
+                            <span>Time Mandante</span>
+                            <span>Escudo Mandante</span>
+                            <span>Placar Mandante</span>
+                            <span>X</span>
+                            <span>Placar Visitante</span>
+                            <span>Escudo Visitante</span>
+                            <span>Time Visitante</span>
+                        </div>
+
+                        <span>Status do Jogo</span>
+                    </li>
+
+                    <!--Nono Jogo-->
+                    <li>
+                        <div>
+                            <span>Nome do Estádio</span>
+                            <span>Data do Jogo</span>
+                            <span>Horário do Jogo</span>
+                        </div>
+
+                        <div>
+                            <span>Time Mandante</span>
+                            <span>Escudo Mandante</span>
+                            <span>Placar Mandante</span>
+                            <span>X</span>
+                            <span>Placar Visitante</span>
+                            <span>Escudo Visitante</span>
+                            <span>Time Visitante</span>
+                        </div>
+
+                        <span>Status do Jogo</span>
+                    </li>
+
+                    <!--Décimo Jogo-->
+                    <li>
+                        <div>
+                            <span>Nome do Estádio</span>
+                            <span>Data do Jogo</span>
+                            <span>Horário do Jogo</span>
+                        </div>
+
+                        <div>
+                            <span>Time Mandante</span>
+                            <span>Escudo Mandante</span>
+                            <span>Placar Mandante</span>
+                            <span>X</span>
+                            <span>Placar Visitante</span>
+                            <span>Escudo Visitante</span>
+                            <span>Time Visitante</span>
+                        </div>
+
+                        <span>Status do Jogo</span>
+                    </li>
+                </ul>
+            </article>
+        </section>
+    </main>
+
+
+    <!--Rodapé padrão-->
+    <footer>
+        <div>
+            <ul>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Contato</a></li>
+                <li><a href="#">Termos de Uso</a></li>
+                <li><a href="#">Política de Privacidade</a></li>
+            </ul>
+        </div>
+    
+        <div>
+            <a href="#" aria-label="Facebook">
+                <span class="fa-brands fa-facebook"></span>
+            </a>
+            <a href="#" aria-label="Twitter">
+                <span class="fa-brands fa-twitter"></span>
+            </a>
+            <a href="#" aria-label="Instagram">
+                <span class="fa-brands fa-instagram"></span>
+            </a>
+            <a href="#" aria-label="GitHub">
+                <span class="fa-brands fa-github"></span>
+            </a>
+        </div>
+    
+        <div>
+            <p>&copy; 2025 Bolão de Palpites. Todos os direitos reservados.</p>
+            <p>Desenvolvido por <a href="https://github.com/fflaviotito">Francisco Flávio</a>.</p>
+        </div>
+    </footer>
+</body>
+</html>
