@@ -1,111 +1,12 @@
 /* Importando as configurações gerais e variáveis */
 @import url(geral.css);
+@import url(default-header.css);
+@import url(default-nav.css);
+@import url(default-footer.css);
 
 /* Configurações gerais */
 * {
     font-family: 'Open Sans', sans-serif;
-}
-
-
-/* Estilos do Header */
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem;
-    background-color: #007bff; /* Azul */
-    color: white;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.header__menu-btn {
-    font-size: 1.5rem;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-}
-
-.header__title {
-    font-size: 1.25rem;
-    font-weight: bold;
-}
-
-
-/* Estilos do Nav */
-.nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 0;
-    overflow: hidden;
-    background-color: #343a40;
-    color: white;
-    transition: width 0.3s ease-in-out;
-    z-index: 1000;
-}
-
-.nav--open {
-    width: 250px;
-}
-
-.nav__overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 999;
-    display: none;
-}
-
-.nav--open ~ .nav__overlay {
-    display: block;
-}
-
-.nav__content {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    padding: 1rem;
-}
-
-.nav__close-btn {
-    align-self: flex-end;
-    font-size: 1.5rem;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-}
-
-.nav__list {
-    margin-top: 2rem;
-}
-
-.nav__item {
-    margin: 1rem 0;
-}
-
-.nav__link {
-    display: flex;
-    align-items: center;
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
-    padding: 0.5rem;
-    transition: background 0.3s;
-}
-
-.nav__link:hover {
-    background-color: #495057;
-    border-radius: 5px;
-}
-
-.nav__link span {
-    margin-left: 0.5rem;
 }
 
 
@@ -272,67 +173,6 @@
     color: #555;
 }
 
-
-/* Estilo do Rodapé */
-.footer {
-    background-color: #333;
-    color: #fff;
-    padding: 32px 16px;
-    text-align: center;
-}
-
-.footer > div {
-    margin-bottom: 16px;
-}
-
-.footer__links ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-}
-
-.footer__links ul li {
-    margin: 0;
-}
-
-.footer__links ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 14px;
-    transition: color 0.3s ease;
-}
-
-.footer__links ul li a:hover {
-    color: #ffcc00;
-}
-
-.footer__social a {
-    color: #fff;
-    font-size: 24px;
-    margin: 0 8px;
-    transition: color 0.3s ease;
-}
-
-.footer__social a:hover {
-    color: #ffcc00;
-}
-
-.footer__copyright p {
-    font-size: 14px;
-    margin: 8px 0;
-}
-
-.footer__copyright a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.footer__copyright a:hover {
-    color: #ffcc00;
-}
 
 /* Responsividade */
 @media (max-width: 768px) {

@@ -1,0 +1,75 @@
+/* Estilos do Nav Padrão */
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    overflow: hidden;
+    background-color: #343a40;
+    color: white;
+    transition: width 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.nav--open {
+    width: 250px;
+}
+
+.nav__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+}
+
+.nav--open ~ .nav__overlay {
+    display: block;
+}
+
+.nav__content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 1rem;
+}
+
+.nav__close-btn {
+    align-self: flex-end;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.nav__list {
+    margin-top: 2rem;
+}
+
+.nav__item {
+    margin: 1rem 0;
+}
+
+.nav__link {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem;
+    transition: background 0.3s;
+}
+
+.nav__link:hover {
+    background-color: #495057;
+    border-radius: 5px;
+}
+
+.nav__link span {
+    margin-left: 0.5rem;
+}
