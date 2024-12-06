@@ -414,11 +414,12 @@
             <h2>Confrontos por rodada</h2>
 
             <article>
-                <div>
-                    <button aria-label="Rodada anterior">
+                <div class="round-selector">
+                    <button aria-label="Rodada anterior" class="round-selector__button prev">
                         <span class="fa-solid fa-square-caret-left"></span>
                     </button>
-                    <select name="rodada" id="rodada" aria-label="Selecionar rodada">
+
+                    <select name="rodada" id="rodada" aria-label="Selecionar rodada" class="round-selector__dropdown">
                         <option value="1">Rodada 1</option>
                         <option value="2">Rodada 2</option>
                         <option value="3">Rodada 3</option>
@@ -458,7 +459,8 @@
                         <option value="37">Rodada 37</option>
                         <option value="38">Rodada 38</option>
                     </select>
-                    <button aria-label="Próxima rodada">
+
+                    <button aria-label="Próxima rodada" class="round-selector__button next">
                         <span class="fa-solid fa-square-caret-right"></span>
                     </button>
                 </div>
