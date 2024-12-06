@@ -6,7 +6,7 @@
     <meta name="description" content="Bolão de Palpites de Futebol">
     <meta name="author" content="Francisco Flávio | GitHub: https://github.com/fflaviotito">
     <!--CSS da página-->
-
+    <link rel="stylesheet" href="../style/resultados.css">
     <!--Icons do Font Awesome-->
     <script src="https://kit.fontawesome.com/6ecc7a6b2a.js" defer></script>
     <!--JS da página-->
@@ -14,62 +14,66 @@
     <title>Bolão de Palpites | Tabela e Jogos</title>
 </head>
 <body>
+    <!-- Área de overlay para o menu lateral -->
+    <div class="nav__overlay"></div>
+
+
     <!--Cabeçalho padrão-->
-    <header>
-        <button aria-label="Abrir menu de navegação">
+    <header class="header">
+        <button aria-label="Abrir menu de navegação" class="header__menu-btn">
             <span class="fa-solid fa-bars"></span>
         </button>
-        <h1>Bolão de Palpites</h1>
+        <h1 class="header__title">Bolão de Palpites</h1>
     </header>
 
 
     <!--Menu de navegação lateral padrão-->
-    <nav aria-hidden="true">
-        <div>
-            <button aria-label="Fechar menu de navegação">
+    <nav aria-hidden="true" class="nav">
+        <div class="nav__content">
+            <button aria-label="Fechar menu de navegação" class="nav__close-btn">
                 <span class="fa-solid fa-xmark"></span>
             </button>
-            
-            <h2>Menu</h2>
 
-            <ul>
-                <li>
-                    <a href="#">
+            <h2 class="nav__title">Menu</h2>
+
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="#" class="nav__link">
                         <span class="fa-solid fa-house"></span>
                         <span>Home</span>
                     </a>
                 </li>
 
-                <li>
-                    <a href="#">
+                <li class="nav__item">
+                    <a href="#" class="nav__link">
                         <span class="fa-solid fa-trophy"></span>
                         <span>Tabela e Jogos</span>
                     </a>
                 </li>
 
-                <li>
-                    <a href="#">
+                <li class="nav__item">
+                    <a href="#" class="nav__link">
                         <span class="fa-solid fa-futbol"></span>
                         <span>Palpites da Rodada</span>
                     </a>
                 </li>
 
-                <li>
-                    <a href="#">
+                <li class="nav__item">
+                    <a href="#" class="nav__link">
                         <span class="fa-solid fa-ranking-star"></span>
                         <span>Palpites da Tabela</span>
                     </a>
                 </li>
 
-                <li>
-                    <a href="#">
+                <li class="nav__item">
+                    <a href="#" class="nav__link">
                         <span class="fa-solid fa-gear"></span>
                         <span>Configurações</span>
                     </a>
                 </li>
 
-                <li>
-                    <a href="#">
+                <li class="nav__item">
+                    <a href="#" class="nav__link">
                         <span class="fa-solid fa-right-from-bracket"></span>
                         <span>Sair</span>
                     </a>
@@ -82,11 +86,11 @@
     <!--Conteúdo principal-->
     <main>
         <!--Seção: Tabela de Classificação-->
-        <section>
-            <h2>Tabela de Classificação</h2>
+        <section class="classification-table">
+            <h2 class="classification-table__title">Tabela de Classificação</h2>
 
-            <table>
-                <thead> <!--Cabeçalho da tabela de classificação-->
+            <table class="classification-table__table">
+                <thead class="classification-table__header"> <!--Cabeçalho da tabela de classificação-->
                     <tr>
                         <th colspan="3">Classificação</th>
                         <th>P</th>
@@ -100,7 +104,7 @@
                     </tr>
                 </thead>
 
-                <tbody> <!--Corpo da tabela de classificação-->
+                <tbody class="classification-table__body"> <!--Corpo da tabela de classificação-->
                     <!--Primeira linha-->
                     <tr>
                         <td>1</td>
@@ -406,221 +410,221 @@
 
 
         <!--Seção: Confrontos por rodada-->
-        <section>
+        <section class="round-matches">
             <h2>Confrontos por rodada</h2>
 
             <article>
                 <h3>Rodada 1</h3>
 
-                <ul>
+                <ul class="round-matches__list">
                     <!--Primeiro Jogo-->
-                    <li>
-                        <div>
-                            <span>Nome do Estádio</span>
-                            <span>Data do Jogo</span>
-                            <span>Horário do Jogo</span>
+                    <li class="round-matches__list-item">
+                        <div class="match-info">
+                            <span>Maracanã</span>
+                            <span>11/02/2025</span>
+                            <span>16:00</span>
                         </div>
 
-                        <div>
-                            <span>Time Mandante</span>
+                        <div class="match-teams">
+                            <span>Flamengo</span>
                             <span>Escudo Mandante</span>
-                            <span>Placar Mandante</span>
-                            <span>X</span>
-                            <span>Placar Visitante</span>
+                            <span class="match-teams__score">2</span>
+                            <span class="match-teams__separator">X</span>
+                            <span class="match-teams__score">0</span>
                             <span>Escudo Visitante</span>
-                            <span>Time Visitante</span>
+                            <span>Vasco</span>
                         </div>
 
-                        <span>Status do Jogo</span>
+                        <span class="match-status">Status do Jogo</span>
                     </li>
 
                     <!--Segundo Jogo-->
-                    <li>
-                        <div>
+                    <li class="round-matches__list-item">
+                        <div class="match-info">
                             <span>Nome do Estádio</span>
                             <span>Data do Jogo</span>
                             <span>Horário do Jogo</span>
                         </div>
 
-                        <div>
+                        <div class="match-teams">
                             <span>Time Mandante</span>
                             <span>Escudo Mandante</span>
-                            <span>Placar Mandante</span>
-                            <span>X</span>
-                            <span>Placar Visitante</span>
+                            <span class="match-teams__score">Placar Mandante</span>
+                            <span class="match-teams__separator">X</span>
+                            <span class="match-teams__score">Placar Visitante</span>
                             <span>Escudo Visitante</span>
                             <span>Time Visitante</span>
                         </div>
 
-                        <span>Status do Jogo</span>
+                        <span class="match-status">Status do Jogo</span>
                     </li>
 
                     <!--Terceiro Jogo-->
-                    <li>
-                        <div>
+                    <li class="round-matches__list-item">
+                        <div class="match-info">
                             <span>Nome do Estádio</span>
                             <span>Data do Jogo</span>
                             <span>Horário do Jogo</span>
                         </div>
 
-                        <div>
+                        <div class="match-teams">
                             <span>Time Mandante</span>
                             <span>Escudo Mandante</span>
-                            <span>Placar Mandante</span>
-                            <span>X</span>
-                            <span>Placar Visitante</span>
+                            <span class="match-teams__score">Placar Mandante</span>
+                            <span class="match-teams__separator">X</span>
+                            <span class="match-teams__score">Placar Visitante</span>
                             <span>Escudo Visitante</span>
                             <span>Time Visitante</span>
                         </div>
 
-                        <span>Status do Jogo</span>
+                        <span class="match-status">Status do Jogo</span>
                     </li>
 
                     <!--Quarto Jogo-->
-                    <li>
-                        <div>
+                    <li class="round-matches__list-item">
+                        <div class="match-info">
                             <span>Nome do Estádio</span>
                             <span>Data do Jogo</span>
                             <span>Horário do Jogo</span>
                         </div>
 
-                        <div>
+                        <div class="match-teams">
                             <span>Time Mandante</span>
                             <span>Escudo Mandante</span>
-                            <span>Placar Mandante</span>
-                            <span>X</span>
-                            <span>Placar Visitante</span>
+                            <span class="match-teams__score">Placar Mandante</span>
+                            <span class="match-teams__separator">X</span>
+                            <span class="match-teams__score">Placar Visitante</span>
                             <span>Escudo Visitante</span>
                             <span>Time Visitante</span>
                         </div>
 
-                        <span>Status do Jogo</span>
+                        <span class="match-status">Status do Jogo</span>
                     </li>
 
                     <!--Quinto Jogo-->
-                    <li>
-                        <div>
+                    <li class="round-matches__list-item">
+                        <div class="match-info">
                             <span>Nome do Estádio</span>
                             <span>Data do Jogo</span>
                             <span>Horário do Jogo</span>
                         </div>
 
-                        <div>
+                        <div class="match-teams">
                             <span>Time Mandante</span>
                             <span>Escudo Mandante</span>
-                            <span>Placar Mandante</span>
-                            <span>X</span>
-                            <span>Placar Visitante</span>
+                            <span class="match-teams__score">Placar Mandante</span>
+                            <span class="match-teams__separator">X</span>
+                            <span class="match-teams__score">Placar Visitante</span>
                             <span>Escudo Visitante</span>
                             <span>Time Visitante</span>
                         </div>
 
-                        <span>Status do Jogo</span>
+                        <span class="match-status">Status do Jogo</span>
                     </li>
 
                     <!--Sexto Jogo-->
-                    <li>
-                        <div>
+                    <li class="round-matches__list-item">
+                        <div class="match-info">
                             <span>Nome do Estádio</span>
                             <span>Data do Jogo</span>
                             <span>Horário do Jogo</span>
                         </div>
 
-                        <div>
+                        <div class="match-teams">
                             <span>Time Mandante</span>
                             <span>Escudo Mandante</span>
-                            <span>Placar Mandante</span>
-                            <span>X</span>
-                            <span>Placar Visitante</span>
+                            <span class="match-teams__score">Placar Mandante</span>
+                            <span class="match-teams__separator">X</span>
+                            <span class="match-teams__score">Placar Visitante</span>
                             <span>Escudo Visitante</span>
                             <span>Time Visitante</span>
                         </div>
 
-                        <span>Status do Jogo</span>
+                        <span class="match-status">Status do Jogo</span>
                     </li>
 
                     <!--Sétimo Jogo-->
-                    <li>
-                        <div>
+                    <li class="round-matches__list-item">
+                        <div class="match-info">
                             <span>Nome do Estádio</span>
                             <span>Data do Jogo</span>
                             <span>Horário do Jogo</span>
                         </div>
 
-                        <div>
+                        <div class="match-teams">
                             <span>Time Mandante</span>
                             <span>Escudo Mandante</span>
-                            <span>Placar Mandante</span>
-                            <span>X</span>
-                            <span>Placar Visitante</span>
+                            <span class="match-teams__score">Placar Mandante</span>
+                            <span class="match-teams__separator">X</span>
+                            <span class="match-teams__score">Placar Visitante</span>
                             <span>Escudo Visitante</span>
                             <span>Time Visitante</span>
                         </div>
 
-                        <span>Status do Jogo</span>
+                        <span class="match-status">Status do Jogo</span>
                     </li>
 
                     <!--Oitavo Jogo-->
-                    <li>
-                        <div>
+                    <li class="round-matches__list-item">
+                        <div class="match-info">
                             <span>Nome do Estádio</span>
                             <span>Data do Jogo</span>
                             <span>Horário do Jogo</span>
                         </div>
 
-                        <div>
+                        <div class="match-teams">
                             <span>Time Mandante</span>
                             <span>Escudo Mandante</span>
-                            <span>Placar Mandante</span>
-                            <span>X</span>
-                            <span>Placar Visitante</span>
+                            <span class="match-teams__score">Placar Mandante</span>
+                            <span class="match-teams__separator">X</span>
+                            <span class="match-teams__score">Placar Visitante</span>
                             <span>Escudo Visitante</span>
                             <span>Time Visitante</span>
                         </div>
 
-                        <span>Status do Jogo</span>
+                        <span class="match-status">Status do Jogo</span>
                     </li>
 
                     <!--Nono Jogo-->
-                    <li>
-                        <div>
+                    <li class="round-matches__list-item">
+                        <div class="match-info">
                             <span>Nome do Estádio</span>
                             <span>Data do Jogo</span>
                             <span>Horário do Jogo</span>
                         </div>
 
-                        <div>
+                        <div class="match-teams">
                             <span>Time Mandante</span>
                             <span>Escudo Mandante</span>
-                            <span>Placar Mandante</span>
-                            <span>X</span>
-                            <span>Placar Visitante</span>
+                            <span class="match-teams__score">Placar Mandante</span>
+                            <span class="match-teams__separator">X</span>
+                            <span class="match-teams__score">Placar Visitante</span>
                             <span>Escudo Visitante</span>
                             <span>Time Visitante</span>
                         </div>
 
-                        <span>Status do Jogo</span>
+                        <span class="match-status">Status do Jogo</span>
                     </li>
 
                     <!--Décimo Jogo-->
-                    <li>
-                        <div>
+                    <li class="round-matches__list-item">
+                        <div class="match-info">
                             <span>Nome do Estádio</span>
                             <span>Data do Jogo</span>
                             <span>Horário do Jogo</span>
                         </div>
 
-                        <div>
+                        <div class="match-teams">
                             <span>Time Mandante</span>
                             <span>Escudo Mandante</span>
-                            <span>Placar Mandante</span>
-                            <span>X</span>
-                            <span>Placar Visitante</span>
+                            <span class="match-teams__score">Placar Mandante</span>
+                            <span class="match-teams__separator">X</span>
+                            <span class="match-teams__score">Placar Visitante</span>
                             <span>Escudo Visitante</span>
                             <span>Time Visitante</span>
                         </div>
 
-                        <span>Status do Jogo</span>
+                        <span class="match-status">Status do Jogo</span>
                     </li>
                 </ul>
             </article>
@@ -629,8 +633,8 @@
 
 
     <!--Rodapé padrão-->
-    <footer>
-        <div>
+    <footer class="footer">
+        <div class="footer__links">
             <ul>
                 <li><a href="#">Sobre</a></li>
                 <li><a href="#">Contato</a></li>
@@ -639,7 +643,7 @@
             </ul>
         </div>
     
-        <div>
+        <div class="footer__social">
             <a href="#" aria-label="Facebook">
                 <span class="fa-brands fa-facebook"></span>
             </a>
@@ -654,7 +658,7 @@
             </a>
         </div>
     
-        <div>
+        <div class="footer__copyright">
             <p>&copy; 2025 Bolão de Palpites. Todos os direitos reservados.</p>
             <p>Desenvolvido por <a href="https://github.com/fflaviotito">Francisco Flávio</a>.</p>
         </div>
