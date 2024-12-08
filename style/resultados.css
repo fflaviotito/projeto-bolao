@@ -10,46 +10,71 @@
 }
 
 
-/* Estilos da Tabela de Classificação*/
+/* Estilos da Tabela de Classificação */
 .classification-table {
     margin: 1rem auto;
     padding: 1rem;
     background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    overflow-x: auto;
 }
 
 .classification-table__title {
     margin-bottom: 1rem;
     text-align: center;
     font-size: 1.5rem;
-    color: #333;
+}
+
+.classification-table__wrapper {
+    display: block;
+    overflow-x: auto;
+    min-height: 1000px;
 }
 
 .classification-table__table {
-    width: 100%;
     border-collapse: collapse;
     text-align: center;
-    min-width: 600px;
+    min-width: 703.53px;
+    table-layout: fixed;
 }
 
 .classification-table__header th {
     background-color: #007bff;
     color: #fff;
     font-weight: bold;
-    padding: 0.8rem;
     border: 1px solid #ddd;
 }
 
+.classification-table__header th:nth-child(n+2) {
+    width: 55px;
+    height: 55px;
+}
+
 .classification-table__body td {
-    padding: 0.8rem;
     border: 1px solid #ddd;
+}
+
+.classification-table__body td:first-child {
+    width: 55px;
+    height: 55px;
+    font-weight: bold;
+    border-right: none;
 }
 
 .classification-table__body td:nth-child(2) {
     text-align: left;
-    padding-left: 1rem;
+    padding-right: 16px;
+    width: 180px;
+    border-left: none;
+    border-right: none;
+}
+
+.classification-table__body td:nth-child(3) {
+    width: 20px;
+    padding-right: 13px;
+    border-left: none;
+}
+
+.classification-table__body td:nth-child(n+4) {
+    width: 55px;
 }
 
 .classification-table__body tr:nth-child(odd) {
@@ -60,13 +85,8 @@
     background-color: #e9ecef;
 }
 
-.classification-table__body td:first-child {
-    text-align: center;
-    font-weight: bold;
-}
 
-
-/*Estilo dos Jogos das Rodadas*/
+/* Estilo dos Jogos das Rodadas */
 .round-selector {
     display: flex;
     align-items: center;
@@ -131,8 +151,8 @@
 .match-info {
     display: flex;
     align-items: center;
-    justify-content: center; /* Centraliza as informações no container */
-    gap: 1rem; /* Espaçamento entre as informações */
+    justify-content: center; 
+    gap: 1rem;
     font-size: 14px;
     color: #666;
 }
@@ -174,14 +194,11 @@
 }
 
 
-/* Responsividade */
-@media (max-width: 768px) {
-    /*Tabela de Classificação*/
-    .classification-table__table {
-        font-size: 0.9rem;
-    }
-    .classification-table__header th, 
-    .classification-table__body td {
-        padding: 0.6rem;
+/* Media Queries - Responsividade */
+@media (min-width: 735px) { /* Resolução acima de 735px */
+    .classification-table__wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
