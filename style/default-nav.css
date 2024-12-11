@@ -24,7 +24,6 @@
     width: 100%;
     background: rgba(0, 0, 0, 0.5);
     z-index: 999;
-    display: none;
 }
 
 .nav--open ~ .nav__overlay {
@@ -65,7 +64,7 @@
     transition: background 0.3s;
 }
 
-.nav__link:hover {
+.nav__link:hover, .nav__link-active {
     background-color: #495057;
     border-radius: 5px;
 }
