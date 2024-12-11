@@ -14,6 +14,7 @@ const loginForm = document.getElementById('form-login'); //Formulário de login
 const loginEmail = document.getElementById('login-email'); //Input do email do formulário de login
 const loginPassword = document.getElementById('login-password'); //Input da senha do formulário de login
 
+
 //Altera visualização entre fromulários de login e cadastro
 changeForm.forEach(function(event) {
     event.addEventListener('click', function() {
@@ -21,6 +22,7 @@ changeForm.forEach(function(event) {
         containerSignupForm.classList.toggle('off');
     });
 });
+
 
 //Formata o input de nome completo do cadastro
 signupName.addEventListener('input', function () {
@@ -40,6 +42,7 @@ signupName.addEventListener('blur', function () {
         signupName.classList.add('correct-input');
     };
 });
+
 
 //Formatar o input de data de nascimento do cadastro
 signupDate.addEventListener('input', function () {
@@ -123,6 +126,7 @@ function validateBirthDate(dateStr) {
     signupDate.classList.add('correct-input');
 };
 
+
 //Formatar o input de e-mail do cadastro
 signupEmail.addEventListener('input', () => {
     signupEmail.value = signupEmail.value.trim().toLowerCase();
@@ -155,9 +159,14 @@ function isValidEmail(email) {
     return emailRegex.test(email);
 }
 
+
 //Formatar o input de senha do cadastro (Não aceitar espaços)
 signupPassword.addEventListener("input", () => {
     signupPassword.value = signupPassword.value.replace(/\s/g, "");
+    if (signupPassword.value != signupConfirmPassword.value) {
+        signupConfirmPassword.classList.remove('correct-input')
+        signupConfirmPassword.classList.add('incorrect-input');
+    };
 });
 
 //Validar o input de senha do cadastro
@@ -199,6 +208,7 @@ iconPassword.forEach((item, index) => {
         inputPassword[index].type = type;
     });
 });
+
 
 //Formatar o input de confirmar senha do cadastro (Não aceitar espaços)
 signupConfirmPassword.addEventListener("input", () => {
