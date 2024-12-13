@@ -1,11 +1,17 @@
-const express = require('express'); //Importa o framework express
-const dotenv = require('dotenv'); //Importa as variáveis do arquivo .env
-const cors = require('cors'); //Importa o pacite cors
-const signupRouter = require('./src/routes/signupRouter'); //Importa as rotas de cadastro de usuário
-const loginRouter = require('./src/routes/loginRouter'); //Importa as rotas de login de usuário
+//========== Importações iniciais ==========
+const express = require('express'); // Importa o framework express
+const dotenv = require('dotenv'); // Importa as variáveis do arquivo .env
+const cors = require('cors'); // Importa o pacite cors
+const signupRouter = require('./src/routes/signupRouter'); // Importa as rotas de cadastro de usuário
+const loginRouter = require('./src/routes/loginRouter'); // Importa as rotas de login de usuário
+const teamsRouter = require('./src/routes/teamsRouter'); // Importa as rotas de atualização dos times no banco de dados
 
-dotenv.config(); //Carrega as variáveis importadas do .env
 
+//========== Carrega as variáveis importadas do .env ==========
+dotenv.config();
+
+
+//========== Configurações do servidor ==========
 const app = express(); //Cria uma instância do servidor express
 app.use(express.json()); // Middleware para analisar o corpo das requisições como JSON
 
@@ -17,9 +23,11 @@ app.use(cors({
     allowedHeaders: ['Content-Type'], // Cabeçalhos permitidos
 }));
 
+
 // ========== Rotas ==========
 app.use(signupRouter); // Usa a rota de cadastro de usuário
 app.use(loginRouter); // Usa a rota de login de usuário
+app.use(teamsRouter); // Usa a rota de consulta times da API
 
 
 //========== Rota simples de teste ==========
