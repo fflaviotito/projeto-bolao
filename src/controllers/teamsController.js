@@ -10,7 +10,7 @@ const fetchTeamsFromAPI = async () => {
         const response = await axios.get('https://v3.football.api-sports.io/teams', {
             params: {
                 league: 71, // ID da liga do Campeonato Brasileiro
-                season: 2024, // Você pode alterar para o ano da temporada atual
+                season: 2022, // Você pode alterar para o ano da temporada atual
               },
               headers: {
                 'x-rapidapi-host': 'v3.football.api-sports.io',
@@ -26,11 +26,51 @@ const fetchTeamsFromAPI = async () => {
 };
 
 
+//========== Função para inserir os dados no banco de dados ==========
+ const insertTeamsDatabase = async (teams) => {
+    try {
+        for (const teamObj of teams) {
+            const team = teamObj.team;
+            const logoUrl = team.logo;
+
+           // Query para inserir ou atualizar os times
+           const query = `
+                INSERT INTO teams (api_team_id, name, short_name, logo_url)
+                VALUES (?, ?, ?, ?)
+                ON DUPLICATE KEY UPDATE
+                name = VALUES(name),
+                short_name = VALUES(short_name),
+                logo_url = VALUES(logo_url)
+            `;
+            
+            // Executa a query com os valores do time
+            await connection.promise().query(query, [
+                team.id,
+                team.name,
+                team.code,
+                logoUrl
+            ]);
+        };
+    } catch (error) {
+        throw new Error('Erro ao inserir ou atualizar os times no banco de dados: ' + error.message);
+    };
+ };
+
+
 //========== Função chamada pelo Routes ==========
 const updateTeams = async(req, res) => {
     try {
-        const teams = await fetchTeamsFromAPI(); // Chama a função para buscar dados da API
-        res.json(teams);
+        const teamsData = await fetchTeamsFromAPI(); // Chama a função para buscar dados da API
+
+        if (!teamsData || !teamsData.response) {
+            return res.status(500).json({ message: 'Nenhum dado encontrado na API.' });
+        }
+
+        const teams = teamsData.response;
+
+        await insertTeamsDatabase(teams); // Chama para inserir os dados no banco de dados
+
+        res.status(200).json({ message: 'Times atualizados com sucesso!' });
     } catch (error) {
         console.error(error);
         res.status(500).json({ message: 'Erro ao atualizar dados dos times.'});
