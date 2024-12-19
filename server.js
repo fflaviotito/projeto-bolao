@@ -5,6 +5,7 @@ const cors = require('cors'); // Importa o pacite cors
 const signupRouter = require('./src/routes/signupRouter'); // Importa as rotas de cadastro de usuário
 const loginRouter = require('./src/routes/loginRouter'); // Importa as rotas de login de usuário
 const teamsRouter = require('./src/routes/teamsRouter'); // Importa as rotas de atualização dos times no banco de dados
+const leaguesRouter = require('./src/routes/leaguesRouter'); // Importa as rotas de atualização das ligas no banco de dados
 
 
 //========== Carrega as variáveis importadas do .env ==========
@@ -28,6 +29,7 @@ app.use(cors({
 app.use(signupRouter); // Usa a rota de cadastro de usuário
 app.use(loginRouter); // Usa a rota de login de usuário
 app.use(teamsRouter); // Usa a rota de consulta times da API
+app.use(leaguesRouter); // Usa a rota de consulta ligas da API
 
 
 //========== Rota simples de teste ==========

@@ -1,6 +1,11 @@
 //========== Importações iniciais ==========
 const axios = require('axios'); // Importa o axios para comunicação via API-Football
 const connection = require('../database'); // Conexão com o banco de dados
+const dotenv = require('dotenv'); // Importa as variáveis do arquivo .env
+
+
+//========== Carrega as variáveis importadas do .env ==========
+dotenv.config();
 
 
 //========== Função para buscar os dados da API ==========
@@ -9,12 +14,12 @@ const fetchTeamsFromAPI = async () => {
         // Realizando a requisição GET para a API externa
         const response = await axios.get('https://v3.football.api-sports.io/teams', {
             params: {
-                league: 71, // ID da liga do Campeonato Brasileiro
-                season: 2022, // Você pode alterar para o ano da temporada atual
+                league: 71,
+                season: 2022,
               },
               headers: {
                 'x-rapidapi-host': 'v3.football.api-sports.io',
-                'x-rapidapi-key': '9de40dc219484f173fd913e6e9ea3649' // Substitua com sua chave de API real
+                'x-rapidapi-key': process.env.API_FOOTBALL_KEY
               }
         });
         
@@ -70,7 +75,7 @@ const updateTeams = async(req, res) => {
 
         await insertTeamsDatabase(teams); // Chama para inserir os dados no banco de dados
 
-        res.status(200).json({ message: 'Times atualizados com sucesso!' });
+        res.status(200).json({ message: 'Times atualizados com sucesso!' }); // Responde ao cliente com uma mensagem de sucesso
     } catch (error) {
         console.error(error);
         res.status(500).json({ message: 'Erro ao atualizar dados dos times.'});
