@@ -216,13 +216,6 @@ body {
     }
 }
 
-@media (min-width:550px) { /* Resolução acima de 549px */
-    .match-teams img {
-        width: 60px;
-        height: 60px;
-    }
-}
-
 @media (min-width: 735px) { /* Resolução acima de 734px */
     .classification-table__wrapper {
         display: flex;
@@ -247,11 +240,6 @@ body {
     .match-teams__team:first-child {
         text-align: right;
     }
-
-    .match-teams img {
-        width: 80px;
-        height: 80px;
-    }
 }
 
 @media (min-width:1200px) { /* Resolução acima de 1199px */
@@ -274,10 +262,5 @@ body {
 
     .match-teams__team {
         font-size: 20px;
-    }
-
-    .match-teams img {
-        width: 50px;
-        height: 50px;
     }
 }

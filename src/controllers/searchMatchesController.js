@@ -14,7 +14,11 @@ const getMatchesByRound = async (req, res) => {
             matches.home_score,
             matches.away_score,
             home_team.name AS home_team_name,
-            away_team.name AS away_team_name
+            away_team.name AS away_team_name,
+             home_team.logo_url AS home_team_logo_url,
+            away_team.logo_url AS away_team_logo_url,
+            home_team.short_name AS home_team_short_name,
+            away_team.short_name AS away_team_short_name
         FROM
             matches
         INNER JOIN
@@ -26,6 +30,7 @@ const getMatchesByRound = async (req, res) => {
         );
 
         res.json(matches);
+        console.log(matches);
     } catch (error) {
         console.error('Erro ao buscar partidas:', error.message);
         res.status(500).json({ error: 'Erro ao buscar partidas' });
