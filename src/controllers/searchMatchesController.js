@@ -30,7 +30,6 @@ const getMatchesByRound = async (req, res) => {
         );
 
         res.json(matches);
-        console.log(matches);
     } catch (error) {
         console.error('Erro ao buscar partidas:', error.message);
         res.status(500).json({ error: 'Erro ao buscar partidas' });

@@ -49,13 +49,19 @@ const updateMatchesList = (matches) => {
         spans[0].textContent = matches[index].home_team_name;
         spans[0].setAttribute('data-name', matches[index].home_team_name);
         spans[0].setAttribute('data-abbr', matches[index].home_team_short_name);
+        spans[0].setAttribute('title', matches[index].home_team_name);
         imgs[0].src = matches[index].home_team_logo_url
+        imgs[0].alt = `Escudo do ${matches[index].home_team_name}`
+        imgs[0].title = matches[index].home_team_name;
         spans[1].textContent = matches[index].home_score;
         spans[3].textContent = matches[index].away_score;
         imgs[1].src = matches[index].away_team_logo_url
+        imgs[1].alt = `Escudo do ${matches[index].away_team_name}`
+        imgs[1].title = matches[index].away_team_name;
         spans[4].textContent = matches[index].away_team_name;
         spans[4].setAttribute('data-name', matches[index].away_team_name);
         spans[4].setAttribute('data-abbr', matches[index].away_team_short_name);
+        spans[4].setAttribute('title', matches[index].away_team_name);
     });
     adjustTeamNames();
 };

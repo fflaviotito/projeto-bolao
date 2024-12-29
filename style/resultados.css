@@ -263,4 +263,9 @@ body {
     .match-teams__team {
         font-size: 20px;
     }
+
+    .match-teams img {
+        width: 40px;
+        height: 40px;
+    }
 }
