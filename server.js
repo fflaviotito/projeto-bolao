@@ -7,6 +7,8 @@ const loginRouter = require('./src/routes/loginRouter'); // Importa as rotas de 
 const teamsRouter = require('./src/routes/teamsRouter'); // Importa as rotas de atualização dos times no banco de dados
 const leaguesRouter = require('./src/routes/leaguesRouter'); // Importa as rotas de atualização das ligas no banco de dados
 const matchesRouter = require('./src/routes/matchesRouter'); // Importa as rotas de atualização das partidas no banco de dados
+const searchMatchesRouter = require('./src/routes/searchMatchesRouter'); // Importa as rotas de consulta das partidas no banco de dados
+
 
 //========== Carrega as variáveis importadas do .env ==========
 dotenv.config();
@@ -31,6 +33,7 @@ app.use(loginRouter); // Usa a rota de login de usuário
 app.use(teamsRouter); // Usa a rota de consulta times da API
 app.use(leaguesRouter); // Usa a rota de consulta ligas da API
 app.use(matchesRouter); //Usa a rota de consulta partidas da API
+app.use(searchMatchesRouter); // Usa a rota de consulta partidas do banco de dados
 
 
 //========== Rota simples de teste ==========
