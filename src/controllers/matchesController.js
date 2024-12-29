@@ -46,20 +46,6 @@ const insertMatches = async(extractedMatches) => {
             tableLeaguesID = rowsLeague[0].id;
             console.log('ID próprio da liga: ', tableLeaguesID);
         };
-
-        // Verificando o ID próprio do time mandante
-        const [rowsTeamHome] = await connection.promise().query('SELECT id FROM teams WHERE api_team_id = ?', extractedMatches[0].home_team_id);
-        if (rowsTeamHome.length > 0) {
-            tableTeamsHomeID = rowsTeamHome[0].id;
-            console.log('ID próprio do time mandante: ', tableTeamsHomeID);
-        };
-
-        // Verificando o ID próprio do time visitante
-        const [rowsTeamAway] = await connection.promise().query('SELECT id FROM teams WHERE api_team_id = ?', extractedMatches[0].away_team_id);
-        if (rowsTeamAway.length > 0) {
-            tableTeamsAwayID = rowsTeamAway[0].id;
-            console.log('ID próprio do time mandante: ', tableTeamsAwayID);
-        };
     } catch (error) {
         console.error('Erro ao consultar informações do banco de dados:', error.message);
     };
@@ -67,9 +53,32 @@ const insertMatches = async(extractedMatches) => {
     // Tratamento de erro para inserção ou atualização de informações no banco de dados
     try {
         for (const match of extractedMatches) {
+            // Verificando o ID próprio do time mandante
+            const [rowsTeamHome] = await connection.promise().query('SELECT id FROM teams WHERE api_team_id = ?', match.home_team_id);
+            if (rowsTeamHome.length > 0) {
+                tableTeamsHomeID = rowsTeamHome[0].id;
+                console.log('ID próprio do time mandante: ', tableTeamsHomeID);
+            };
+
+            // Verificando o ID próprio do time visitante
+            const [rowsTeamAway] = await connection.promise().query('SELECT id FROM teams WHERE api_team_id = ?', match.away_team_id);
+            if (rowsTeamAway.length > 0) {
+                tableTeamsAwayID = rowsTeamAway[0].id;
+                console.log('ID próprio do time mandante: ', tableTeamsAwayID);
+            };
+
             // Query para inserir ou atualizar a partida
             const query = `
-                INSERT INTO matches (api_match_id, league_id, home_team_id, away_team_id, rounds, data_time, stadium, home_score, away_score)
+                INSERT INTO matches 
+                    (api_match_id,
+                    league_id,
+                    home_team_id,
+                    away_team_id,
+                    rounds,
+                    data_time,
+                    stadium,
+                    home_score,
+                    away_score)
                 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
                 ON DUPLICATE KEY UPDATE
                     league_id = VALUES(league_id),
