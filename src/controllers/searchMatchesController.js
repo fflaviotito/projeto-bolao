@@ -2,7 +2,7 @@
 const connection = require('../database'); // Conexão com o banco de dados
 
 
-// Função para buscar partidas por rodada
+//========== Função para buscar partidas por rodada ==========
 const getMatchesByRound = async (req, res) => {
     const { round } = req.params;
 

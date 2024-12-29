@@ -8,6 +8,7 @@ const teamsRouter = require('./src/routes/teamsRouter'); // Importa as rotas de 
 const leaguesRouter = require('./src/routes/leaguesRouter'); // Importa as rotas de atualização das ligas no banco de dados
 const matchesRouter = require('./src/routes/matchesRouter'); // Importa as rotas de atualização das partidas no banco de dados
 const searchMatchesRouter = require('./src/routes/searchMatchesRouter'); // Importa as rotas de consulta das partidas no banco de dados
+const searchRatingRouter = require('./src/controllers/searchRatingController'); // Importa as rotas de consulta ao banco de dados para classificação
 
 
 //========== Carrega as variáveis importadas do .env ==========
@@ -34,6 +35,7 @@ app.use(teamsRouter); // Usa a rota de consulta times da API
 app.use(leaguesRouter); // Usa a rota de consulta ligas da API
 app.use(matchesRouter); //Usa a rota de consulta partidas da API
 app.use(searchMatchesRouter); // Usa a rota de consulta partidas do banco de dados
+app.use(searchRatingRouter); // Usa a rota de consulta ao banco de dados para montar a classificação
 
 
 //========== Rota simples de teste ==========

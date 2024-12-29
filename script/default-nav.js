@@ -54,7 +54,6 @@ function activeMenuItem() {
             linkNav[c].classList.add('nav__link-active');
         };
     };
-    console.log('Item no menu selecionado com sucesso!')
 }
 
 
